@@ -1,43 +1,69 @@
 console.log("main.js");
 
-let pacientName = document.querySelector("#name");
-let prenume = document.querySelector("#prenume");
+let firstName = document.querySelector("#firstName");
+let secondName = document.querySelector("#secondName");
+let height = document.querySelector("#height");
+let weight = document.querySelector("#weight");
 
-let genderName;
-function genderFunction() {
-  var gender = document.getElementsByName("gender")[0];
-  genderName = gender.options[gender.selectedIndex].text;
+let genderType;
+function result() {
+  let gender = document.getElementsByName("gender")[0];
+  genderType = gender.options[gender.selectedIndex].text;
+  testedValue();
+}
+
+
+let newHeight = 0;
+let newWeight = 0;
+function testedValue() {
+  let errors = false;
+
+  newHeight = testUserValue(height, "Please input a real value for Height!");
+  if (newHeight == false) {
+    errors = true;
+  }
+
+  newWeight = testUserValue(weight, "Please input a real value for Weight!");
+  if (newWeight == false) {
+    errors = true;
+  }
+
+  if (errors) {
+    return;
+  } 
+  else {
+    if (newHeight == parseInt(newHeight)) {
+      newHeight = newHeight / 100;
+    }
+    calculate();
+  }
 }
 
 let BMI;
-let score;
+let range;
 function calculate() {
-  let height = document.querySelector("#height").value;
-  let bodyweight = document.querySelector("#weight").value;
-
-  BMI = Math.round(bodyweight / (height * height));
+  BMI = Math.round(newWeight / (newHeight * newHeight));
   if (BMI < 18.5) {
-    score = "underweight";
+    range = "underweight";
+  } else if (BMI >= 18.5 && BMI < 25) {
+    range = "normal";
+  } else if (BMI >= 25 && BMI < 30) {
+    range = "overweight";
   } else {
-    if (BMI >= 18.5 && BMI < 25) {
-      score = "normal";
-    } else {
-      if (BMI >= 25 && BMI < 30) {
-        score = "overweight";
-      } else {
-        score = "obese";
-      }
-    }
+    range = "obese";
   }
-  console.log(score);
-}
-
-function result() {
-  calculate();
-  genderFunction();
 
   let display = document.querySelector(".display");
-  display.innerText =
-    pacientName.value + " " + prenume.value + " | " + genderName + " | " + BMI + " | " + score;
+  display.innerText = firstName.value + " " + secondName.value + " | " + genderType + " | BMI:" + BMI + " | " + range;
 }
 
+function testUserValue(textbox, errorMsg) {
+  textbox.style.borderColor = "black";
+  let nr = textbox.value;
+  if (checkNumber(nr) === false) {
+    alert(errorMsg);
+    textbox.style.borderColor = "red";
+    return false;
+  }
+  return Number(nr);
+}
