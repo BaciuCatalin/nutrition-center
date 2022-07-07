@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Center</title>
+    <link rel="stylesheet" href="nutrition.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="title">Nutrition Center</h1>
+        <div class="inputData">
+            <div>
+                <input type="text" id="name" class="inputBox" placeholder="Name">
+                <input type="text" id="prenume" class="inputBox" placeholder="Prenume">
+            </div>
+            <div>
+                <select name="gender" id="gender" class="selectGender">
+                    <option value="1" selected="selected">male</option>
+                    <option value="2">female</option>
+                    <option value="3">other</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" id="height" class="inputBox" placeholder="Height (M)">
+                <input type="text" id="weight" class="inputBox" placeholder="Weight (KG)">
+            </div>
+
+        </div>
+        <div>
+            <button class="button" onclick="result()">Result</button>
+        </div>
+        <div class="display"></div>
+    </div>
+
+    <script src="nutrition.js"></script>
+ </body>
+
+</html>
