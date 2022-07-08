@@ -2,14 +2,15 @@
     margin: 0px;
     padding: 0px;
     text-transform: capitalize;
+    font-size: 24px;
 }
 
 .main .title {
-  margin-left:  5px;
+  margin-left:  15px;
 }
 
 .main .inputData{
-    margin-left: 5px;
+    margin-left: 15px;
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
@@ -17,21 +18,25 @@
 
 .main .inputData .inputBox {
     width: 250px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-transform: capitalize;
+    font-size: 20px;
 } 
 
 .main .inputData .selectGender {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-transform: capitalize;
+    font-size: 20px;
+    border-radius: 1px;
 }
 
 .main .button{
-    margin: 20px 0 0 5px ;
-    border-radius: 5px;
+    margin: 20px 0 0 15px ;
+    border-radius: 3px;
     background-color: darkgrey;
     color: blue;
     border: 1px solid;
+    font-size: 20px;
 }
 
 .main .display{
