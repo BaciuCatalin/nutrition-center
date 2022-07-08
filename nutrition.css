@@ -37,6 +37,7 @@
 .main .display{
     margin-top: 20px;
     padding: 10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 500px;
+
 }
