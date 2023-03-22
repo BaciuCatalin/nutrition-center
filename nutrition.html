@@ -6,18 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrition Center</title>
+
     <link rel="stylesheet" href="nutrition.css">
 </head>
 
 <body>
-    <div class="main">
+    <div>
         <h1 class="title">Nutrition Center</h1>
+    </div>
+    <div class="main">
         <div class="inputData">
             <div>
                 <input type="text" id="firstName" class="inputBox" placeholder="first name" autofocus>
                 <input type="text" id="secondName" class="inputBox" placeholder="second name">
             </div>
             <div>
+                <p>Gender</p>
                 <select name="gender" id="gender" class="selectGender">
                     <option value="1" selected="selected">male</option>
                     <option value="2">female</option>
@@ -25,19 +29,22 @@
                 </select>
             </div>
             <div>
-                <input type="text" id="height" class="inputBox" placeholder="Height (M)" >
-                <input type="text" id="weight" class="inputBox" maxlength="3"  placeholder="Weight (KG)">
+                <p>Height</p>
+                <input type="text" id="height" class="inputBox" placeholder="Height (M)">
+                <p>Weight</p>
+                <input type="text" id="weight" class="inputBox" maxlength="3" placeholder="Weight (KG)">
             </div>
-
         </div>
         <div>
             <button class="button" onclick="result()">Result</button>
         </div>
-            <div class="display"></div>
-        </div>
+    </div>
+
+    <div class="display"></div>
 
     <script src="nutrition.js"></script>
     <script src="utils.js"></script>
- </body>
+
+</body>
 
 </html>
