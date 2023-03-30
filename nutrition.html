@@ -15,10 +15,25 @@
         <h1 class="title">Nutrition Center</h1>
     </div>
     <div class="main">
-        <div class="inputData">
+        <div class="measurement">
+            <label for="measurement">Measurement System</label>
+            <select id="measurement" class="selectUnits" onchange="changeMeasurement()">
+                <option value="metric" selected="selected">Metric Units</option>
+                <option value="us" >Us Units</option>
+            </select>
+        </div><br>
+
+        <div class="inputData" id="inputData">
             <div>
+                <p>First Name</p>
                 <input type="text" id="firstName" class="inputBox" placeholder="first name" autofocus>
+                <p>Second Name</p>
                 <input type="text" id="secondName" class="inputBox" placeholder="second name">
+            </div>
+
+            <div>
+                <p>Age</p>
+                <input type="text" id="age" class="inputBox" placeholder="input age">
             </div>
             <div>
                 <p>Gender</p>
@@ -29,14 +44,14 @@
                 </select>
             </div>
             <div>
-                <p>Height</p>
-                <input type="text" id="height" class="inputBox" placeholder="Height (M)">
-                <p>Weight</p>
-                <input type="text" id="weight" class="inputBox" maxlength="3" placeholder="Weight (KG)">
+                <p>Height<span id="height-unit"></span></p>
+                <input type="text" id="height" class="inputBox" name="height" placeholder="Height">
+                <p>Weight<span id="weight-unit"></span></p>
+                <input type="text" id="weight" class="inputBox" maxlength="3" name="weight" placeholder="Weight">
             </div>
         </div>
         <div>
-            <button class="button" onclick="result()">Result</button>
+            <button class="button" id="myButton" onclick="result()">Result</button>
         </div>
     </div>
 

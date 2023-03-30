@@ -16,25 +16,39 @@
   border-radius: 5px;
 }
 
+.main .measurement{
+  margin-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.main .measurement .selectUnits{
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
 .main .inputData {
   margin-left: 15px;
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .main .inputData .inputBox {
   width: 250px;
   margin-bottom: 10px;
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .main .inputData .selectGender {
   margin-bottom: 10px;
   text-transform: capitalize;
-  font-size: 20px;
-  border-radius: 1px;
+  font-size: 18px;
 }
 
 .button {
@@ -47,7 +61,8 @@
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 15px;
+  text-transform: uppercase;
+  font-size: 18px;
 }
 
 .display {
