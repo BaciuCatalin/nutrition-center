@@ -1,48 +1,75 @@
-.main{
-    margin: 0px;
-    padding: 0px;
-    text-transform: capitalize;
-    font-size: 24px;
+.title {
+  margin-left: 15px;
+  text-align: center;
 }
 
-.main .title {
-  margin-left:  15px;
+.main {
+  margin: 0px;
+  padding: 0px;
+  text-transform: capitalize;
+  font-size: 15px;
+  max-width: 500px;
+  margin: 30px auto;
+  min-height: 300px;
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
-.main .inputData{
-    margin-left: 15px;
-    display: flex;
-    flex-direction: column;
-    text-transform: uppercase;
+.main .measurement{
+  margin-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.main .measurement .selectUnits{
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.main .inputData {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .main .inputData .inputBox {
-    width: 250px;
-    margin-bottom: 10px;
-    text-transform: capitalize;
-    font-size: 20px;
-} 
+  width: 250px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
 
 .main .inputData .selectGender {
-    margin-bottom: 10px;
-    text-transform: capitalize;
-    font-size: 20px;
-    border-radius: 1px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-size: 18px;
 }
 
-.main .button{
-    margin: 20px 0 0 15px ;
-    border-radius: 3px;
-    background-color: darkgrey;
-    color: blue;
-    border: 1px solid;
-    font-size: 20px;
+.button {
+  margin: 20px 0 0 15px;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
 }
 
-.main .display{
-    margin-top: 20px;
-    padding: 10px;
-    /* border: 1px solid black; */
-    width: 500px;
-
+.display {
+  margin-top: 20px;
+  padding: 10px;
+  width: auto;
+  font-size: 35px;
+  text-transform: capitalize;
+  text-align: center;
 }

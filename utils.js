@@ -12,6 +12,10 @@ function checkNumber(nr) {
     if (isNaN(nr)) {
         return false;
     }
+
+    if (nr <= 0){
+        return false;
+    }
     return true;
 
 }
